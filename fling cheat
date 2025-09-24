@@ -1,20 +1,10 @@
---[[
-    KILASIK's Multi-Target Fling Exploit
-    Based on the working fling mechanism from zqyDSUWX
-    Features:
-    - Select multiple targets
-    - Continuous flinging until stopped
-    - Preserves player mobility (no teleporting to targets)
-    - Flings targets very far
-    - Compatible with JJSploit, Synapse X, etc.
-]]
 -- Services
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local Player = Players.LocalPlayer
 -- GUI Setup
 local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "KilasikFlingGUI"
+ScreenGui.Name = "Prill Leffes Finger GUI"
 ScreenGui.ResetOnSpawn = false
 ScreenGui.Parent = game:GetService("CoreGui")
 -- Main Frame
@@ -36,7 +26,7 @@ TitleBar.Parent = MainFrame
 local Title = Instance.new("TextLabel")
 Title.Size = UDim2.new(1, -30, 1, 0)
 Title.BackgroundTransparency = 1
-Title.Text = "KILASIK'S MULTI-FLING"
+Title.Text = "Prill Leffes multi finger"
 Title.TextColor3 = Color3.fromRGB(255, 80, 80)
 Title.Font = Enum.Font.SourceSansBold
 Title.TextSize = 18
@@ -57,7 +47,7 @@ local StatusLabel = Instance.new("TextLabel")
 StatusLabel.Position = UDim2.new(0, 10, 0, 40)
 StatusLabel.Size = UDim2.new(1, -20, 0, 25)
 StatusLabel.BackgroundTransparency = 1
-StatusLabel.Text = "Select targets to fling"
+StatusLabel.Text = "Select niggers to finger"
 StatusLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 StatusLabel.Font = Enum.Font.SourceSans
 StatusLabel.TextSize = 16
@@ -231,10 +221,10 @@ end
 local function UpdateStatus()
     local count = CountSelectedTargets()
     if FlingActive then
-        StatusLabel.Text = "Flinging " .. count .. " target(s)"
+        StatusLabel.Text = "Fingering " .. count .. " niggers(s)"
         StatusLabel.TextColor3 = Color3.fromRGB(255, 80, 80)
     else
-        StatusLabel.Text = count .. " target(s) selected" 
+        StatusLabel.Text = count .. " niggers(s) fingered" 
         StatusLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
     end
 end
@@ -406,15 +396,15 @@ local function StartFling()
     
     local count = CountSelectedTargets()
     if count == 0 then
-        StatusLabel.Text = "No targets selected!"
+        StatusLabel.Text = "No niggers selected!"
         wait(1)
-        StatusLabel.Text = "Select targets to fling"
+        StatusLabel.Text = "Select niggers to fling"
         return
     end
     
     FlingActive = true
     UpdateStatus()
-    Message("Started", "Flinging " .. count .. " targets", 2)
+    Message("Started", "Fingering " .. count .. " niggers", 2)
     
     -- Start flinger in separate thread
     spawn(function()
@@ -461,7 +451,7 @@ local function StopFling()
     FlingActive = false
     
     UpdateStatus()
-    Message("Stopped", "Fling has been stopped", 2)
+    Message("Stopped", "Fingering has been stopped", 2)
 end
 -- Set up button connections
 StartButton.MouseButton1Click:Connect(StartFling)
@@ -485,4 +475,4 @@ end)
 RefreshPlayerList()
 UpdateStatus()
 -- Success message
-Message("Loaded", "KILASIK's Multi-Target Fling GUI loaded!", 3)
+Message("Just got fingered", "My asshole hurts", 3)
